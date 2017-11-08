@@ -1,0 +1,20 @@
+{
+  "name": "webext-discard-tab",
+  "version": "1.0.0",
+  "description": "Adds Freeze action to tab right-click",
+  "main": "background.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0"
+  },
+  "scripts": {
+    "test": "eslint ."
+  },
+  "keywords": [
+    "webext",
+    "discard"
+  ],
+  "author": "Frederik Braun",
+  "license": "MPL-2.0"
+}

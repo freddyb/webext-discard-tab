@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "Freeze Tab",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "Adds Freeze action to tab right-click",
+    "description": "Description of the add-on."
+  },
+  "menuItemDiscard": {
+    "message": "Freeze Tab",
+    "description": "Title of context menu item that discard the right-clicked tab."
+  }
+}

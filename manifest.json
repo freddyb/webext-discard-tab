@@ -1,0 +1,25 @@
+{
+  "description": "__MSG_extensionDescription__",
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "version": "1.0",
+  "homepage_url": "https://github.com/freddyb/webext-discard-tab",
+  "default_locale": "en",
+  "icons": {
+    "48": "icons/icon.png",
+    "96": "icons/icon.png"
+  },
+  "applications": {
+    "gecko": {
+      "strict_min_version": "58.0a1"
+    }
+  },
+  "permissions": [
+    "tabs",
+    "menus"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
