@@ -7,4 +7,4 @@ Freezing, or discarding, tabs removes them from memory and stops all background 
 The tab will continue to exist and everything will reload, if you click it.
 
 ## Installation
-[Install on addons.mozilla.org](https://addons.mozilla.org/)
+[Install on addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/freeze-tab/)
