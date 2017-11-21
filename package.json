@@ -1,7 +1,7 @@
 {
   "name": "webext-discard-tab",
   "version": "1.0.0",
-  "description": "Adds Freeze action to tab right-click",
+  "description": "Adds Discard action to tab right-click",
   "main": "background.js",
   "dependencies": {
   },

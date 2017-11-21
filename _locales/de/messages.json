@@ -1,14 +1,14 @@
 {
   "extensionName": {
-    "message": "Tab einfrieren",
+    "message": "Tab verwerfen",
     "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "Erlaubt es, Tabs per Rechtsklick einzufrieren.",
+    "message": "Erlaubt es, Tabs per Rechtsklick zu verwerfen.",
     "description": "Description of the add-on."
   },
   "menuItemDiscard": {
-    "message": "Tab Einfrieren",
+    "message": "Tab verwerfen",
     "description": "Title of context menu item that discard the right-clicked tab."
   }
 }
