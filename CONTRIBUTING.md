@@ -1,4 +1,4 @@
-# Contributing to Freeze Tab
+# Contributing to Discard Tab
 
 ## Localization & Translations
 These are the steps if you want to contribute messages for a new language:
@@ -11,7 +11,7 @@ These are the steps if you want to contribute messages for a new language:
 
 ### Roadmap and future plans
 I'm thinking of adding a feature that automatically goes through tabs and
-freezes those that haven't been used in a long while.
+discards (freezes) those that haven't been used in a long while.
 The steps towards that are:
 - Figuring out how to identify a tab's last usage.
 - Store tab's last use time in the add-on and keep it updated, when the user clicks a tab.
