@@ -10,5 +10,9 @@
   "menuItemDiscard": {
     "message": "Discard Tab",
     "description": "Title of context menu item that discard the right-clicked tab."
+  },
+  "toggleSnowflakePref": {
+    "message": "Prepend snowflake to discarded tabs (requires extra permission). ",
+    "description": "Label of checkbox to toggle the setting that controls whether a snowflake is prepended to tab titles."
   }
 }

@@ -15,9 +15,18 @@
     }
   },
   "permissions": [
+    "storage",
     "tabs",
     "menus"
   ],
+  "optional_permissions": [
+    "<all_urls>"
+  ],
+  "options_ui": {
+    "browser_style": true,
+    "open_in_tab": true,
+    "page": "options.html"
+  },
 
   "background": {
     "scripts": ["background.js"]
