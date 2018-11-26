@@ -5,9 +5,6 @@ var prefPrependSnowflake = document.getElementById("prefPrependSnowflake");
 prefPrependSnowflake.onchange = async () => {
   if (prefPrependSnowflake.checked) {
     prefPrependSnowflake.disabled = true;
-    // Note: permissions.request only works when this page is shown in a tab,
-    // i.e. when options_ui.open_in_tab=true in manifest.json.
-    // See https://bugzilla.mozilla.org/show_bug.cgi?id=1382953
     prefPrependSnowflake.checked = await browser.permissions.request(permissions);
     prefPrependSnowflake.disabled = false;
   } else {
