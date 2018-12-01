@@ -2,7 +2,7 @@
   "description": "__MSG_extensionDescription__",
   "manifest_version": 2,
   "name": "__MSG_extensionName__",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "homepage_url": "https://github.com/freddyb/webext-discard-tab",
   "default_locale": "en",
   "icons": {
@@ -11,6 +11,7 @@
   },
   "applications": {
     "gecko": {
+      "id": "{44173eb0-7ea4-5959-8bde-d85c2f8b4e25}",
       "strict_min_version": "58.0a1"
     }
   },
