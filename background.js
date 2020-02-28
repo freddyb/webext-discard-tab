@@ -25,8 +25,8 @@ browser.menus.create({
 async function getHighlightedTabs(tab) {
   if (tab.highlighted) {
     return browser.tabs.query({
-      windowId:    tab.windowId,
-      highlighted: true
+      windowId: tab.windowId,
+      highlighted: true,
     });
   }
   else {
