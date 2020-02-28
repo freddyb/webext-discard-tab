@@ -45,8 +45,8 @@ browser.menus.onClicked.addListener(async (info, tab) => {
     // before discarding the tab.
     const errors = [];
     await Promise.all(ids.map(id => browser.tabs.executeScript(id, {
-        runAt: "document_start",
-        code: CODE_SHOW_SNOWFLAKE,
+      runAt: "document_start",
+      code: CODE_SHOW_SNOWFLAKE,
     }).catch(error => {
       errors.push(error);
       console.error(error);
