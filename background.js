@@ -43,12 +43,15 @@ browser.menus.onClicked.addListener(async (info, tab) => {
   if (prependSnowflake) {
     // Try to prepend a snowflake before the title,
     // before discarding the tab.
-    try {
-      await Promise.all(ids.map(id => browser.tabs.executeScript(id, {
+    const errors = [];
+    await Promise.all(ids.map(id => browser.tabs.executeScript(id, {
         runAt: "document_start",
         code: CODE_SHOW_SNOWFLAKE,
-      })));
-    } catch (e) {
+    }).catch(error => {
+      errors.push(error);
+      console.error(error);
+    })));
+    if (errors.length > 0) {
       // This can happen if the tab is a privileged page, e.g. about:addons.
     }
   }
