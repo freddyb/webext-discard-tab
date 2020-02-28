@@ -49,7 +49,7 @@ browser.menus.onClicked.addListener(async (info, tab) => {
       code: CODE_SHOW_SNOWFLAKE,
     }).catch(error => {
       errors.push(error);
-      console.error(error);
+      console.error(error, `tab id: ${id}`);
     })));
     if (errors.length > 0) {
       // This can happen if the tab is a privileged page, e.g. about:addons.
