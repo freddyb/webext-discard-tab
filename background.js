@@ -22,23 +22,37 @@ browser.menus.create({
   contexts: ["tab"]
 });
 
+async function getHighlightedTabs(tab) {
+  if (tab.highlighted) {
+    return browser.tabs.query({
+      windowId:    tab.windowId,
+      highlighted: true
+    });
+  }
+  else {
+    return [tab];
+  }
+}
+
 browser.menus.onClicked.addListener(async (info, tab) => {
-  if (tab.discarded) {
+  const tabs = await getHighlightedTabs(tab);
+  if (tabs.every(tab => tab.discarded)) {
     return;
   }
+  const ids = tabs.map(tab => tab.id);
   if (prependSnowflake) {
     // Try to prepend a snowflake before the title,
     // before discarding the tab.
     try {
-      await browser.tabs.executeScript(tab.id, {
+      await Promise.all(ids.map(id => browser.tabs.executeScript(id, {
         runAt: "document_start",
         code: CODE_SHOW_SNOWFLAKE,
-      });
+      })));
     } catch (e) {
       // This can happen if the tab is a privileged page, e.g. about:addons.
     }
   }
-  browser.tabs.discard(tab.id);
+  browser.tabs.discard(ids);
 });
 
 browser.storage.onChanged.addListener((changes) => {

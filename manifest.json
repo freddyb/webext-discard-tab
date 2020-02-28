@@ -12,7 +12,7 @@
   "applications": {
     "gecko": {
       "id": "{44173eb0-7ea4-5959-8bde-d85c2f8b4e25}",
-      "strict_min_version": "58.0a1"
+      "strict_min_version": "64"
     }
   },
   "permissions": [
