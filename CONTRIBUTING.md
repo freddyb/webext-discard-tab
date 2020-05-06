@@ -1,10 +1,11 @@
 # Contributing to Discard Tab
 
-## This
-I consider this extension mostly "done".
+## This extension is complete.
+I consider this software complete.
 I do not intend to add features.
 I'm unlikely to accept pull requests, unless the extension becomes broken.
-Examples of acceptable patches:
+
+*Examples of acceptable patches:*
 - Firefox Web Extension APIs change. The add-on won't work with a new version of Firefox
 - Adding new localizations (see below)
 Examples of inacceptable pull requests:
