@@ -1,5 +1,16 @@
 # Contributing to Discard Tab
 
+## This
+I consider this extension mostly "done".
+I do not intend to add features.
+I'm unlikely to accept pull requests, unless the extension becomes broken.
+Examples of acceptable patches:
+- Firefox Web Extension APIs change. The add-on won't work with a new version of Firefox
+- Adding new localizations (see below)
+Examples of inacceptable pull requests:
+- new features, especially those that require new permissions
+
+
 ## Localization & Translations
 These are the steps if you want to contribute messages for a new language:
 - Figure out short name for your language (e.g., `es`)
@@ -7,15 +18,3 @@ These are the steps if you want to contribute messages for a new language:
 - modify the `message` fields in `messages.json`, but leave the descriptions intact
 - file a pull request with the new folder and modified messages.json file
 - Done!
-
-
-### Roadmap and future plans
-I'm thinking of adding a feature that automatically goes through tabs and
-discards (freezes) those that haven't been used in a long while.
-The steps towards that are:
-- Figuring out how to identify a tab's last usage.
-- Store tab's last use time in the add-on and keep it updated, when the user clicks a tab.
-- Every X minutes (5? 10?), go through tabs and discard.
-
-### Other contributions
-I'm open to other contributions, please file an issue to start a discussion!
