@@ -1,0 +1,18 @@
+{
+  "extensionName": {
+    "message": "Gel onglet",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "Ajoute la fonctionalité Geler l'onglet par clic droit sur l'onglet.",
+    "description": "Description of the add-on."
+  },
+  "menuItemDiscard": {
+    "message": "Geler l'onglet",
+    "description": "Title of context menu item that discard the right-clicked tab."
+  },
+  "toggleSnowflakePref": {
+    "message": "Ajouter un flocon de neige sur le titre des onglets gelés.",
+    "description": "Label of checkbox to toggle the setting that controls whether a snowflake is prepended to tab titles."
+  }
+}
