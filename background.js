@@ -22,7 +22,7 @@ browser.menus.create({
   contexts: ["tab"]
 });
 
-browser.menus.onClicked.addListener(async (info, tab) => {
+const discardTab = async (tab) => {
   if (tab.discarded) {
     return;
   }
@@ -39,6 +39,18 @@ browser.menus.onClicked.addListener(async (info, tab) => {
     }
   }
   browser.tabs.discard(tab.id);
+}
+
+browser.menus.onClicked.addListener(async (info, tab) => {
+  // A highlighted tab is a selected tab.
+  // If the tab is not highlighted, the user clicked on a tab that is neither selected nor the active tab.
+  // If the tab is highlighted it might be the active tab or one of multiple selected tabs.
+  if (tab.highlighted) {
+    const tabs = await browser.tabs.query({windowId: tab.windowId, active: false, discarded: false, highlighted: true});
+    tabs.forEach(async (it) => await discardTab(it));
+  } else {
+    discardTab(tab);
+  }
 });
 
 browser.storage.onChanged.addListener((changes) => {
